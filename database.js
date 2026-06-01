@@ -1,5 +1,3 @@
-
-
 const Database = require ("better-sqlite3");
 const db = new Database("lager.db", {verbose: console.log})
 
