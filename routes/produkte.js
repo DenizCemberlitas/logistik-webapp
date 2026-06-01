@@ -19,13 +19,13 @@ router.get("/:id", (req, res) => {
 
 //Endpunkt neues Produkt anlegen
 router.post("/", (req, res) => {
-    const runPost = db.prepare("INSERT INTO produkte (name, einheit, bestand) VALUES (?,?,?)").run(req.body);
+    const runPost = db.prepare("INSERT INTO produkte (name,kategorie,einheit,bestand,mindestbestand,lagerort) VALUES (?,?,?,?,?,?)").run(req.body.name, req.body.kategorie, req.body.einheit, req.body.bestand, req.body.mindestbestand, req.body.lagerort);
     res.json(runPost);
 });
 
 //Endpunkt Produkt aktualisieren
 router.put("/:id", (req, res) => {
-    const runPut = db.prepare("UPDATE produkte SET name = ?, einheit = ?, bestand = ? WHERE id = ?").run(req.params.id);
+    const runPut = db.prepare("UPDATE produkte SET name = ?, kategorie = ?, einheit = ?, bestand = ?, mindestbestand = ?, lagerort = ? WHERE id = ?").run(req.body.name, req.body.kategorie, req.body.einheit, req.body.bestand, req.body.mindestbestand, req.body.lagerort, req.params.id);
     res.json(runPut);
 });
 
@@ -34,3 +34,5 @@ router.delete("/:id", (req, res) => {
     const runDelete = db.prepare("DELETE FROM produkte WHERE id = ?").run(req.params.id);
     res.json(runDelete);
 });
+
+module.exports = router;

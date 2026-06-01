@@ -19,13 +19,13 @@ router.get("/:id", (req, res) => {
 
 //Endpunkt neue Buchung anlegen
 router.post("/", (req, res) => {
-    const runPost = db.prepare("INSERT INTO buchungen (typ, menge, datum) VALUES (?,?,?)").run(req.body);
+    const runPost = db.prepare("INSERT INTO buchungen (produktId,typ,menge,datum,notiz) VALUES (?,?,?,?,?)").run(req.body.produktId, req.body.typ, req.body.menge, req.body.datum, req.body.notiz);
     res.json(runPost);
 });
 
 //Endpunkt Buchung aktualisieren
 router.put("/:id", (req, res) => {
-    const runPut = db.prepare("UPDATE buchungen SET typ = ?, menge = ? WHERE id = ?").run(req.params.id);
+    const runPut = db.prepare("UPDATE buchungen SET typ = ?, menge = ?, datum = ?, notiz = ? WHERE id = ?").run(req.body.typ, req.body.menge, req.body.datum, req.body.notiz, req.params.id);
     res.json(runPut);
 });
 
@@ -34,3 +34,5 @@ router.delete("/:id", (req, res) => {
     const runDelete = db.prepare("DELETE FROM buchungen WHERE id = ?").run(req.params.id);
     res.json(runDelete);
 });
+
+module.exports = router;
