@@ -20,7 +20,21 @@
       <button type="submit" title="Hinzufügen">+</button>
     </form>
 
-    <div id="ProdukteList"></div>
+    <!--<div id="ProdukteList"></div>-->
+
+    <table id="ProdukteList">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Kategorie</th>
+          <th>Einheit</th>
+          <th>Bestand</th>
+          <th>Mindestbestand</th>
+          <th>Lagerort</th>
+        </tr>
+      </thead>
+      <tbody id="ProdukteBody"></tbody>
+    </table>
 
     <script type="module" src="app.js"></script>
   </body>

@@ -1,11 +1,19 @@
 :root{
-    --bg: #000000;
+    --bg: #242424;
     --text: #ffffff;
+    --warnung: #e91313;
 
 }
 
 body {
     margin: 0;
     font-family:'Times New Roman', Times, serif;
-    
+    background-color: var(--bg);
+    color: var(--text);
 }
+
+.warnung {
+    background-color: var(--warnung);
+    color: var(--text);
+}
+
