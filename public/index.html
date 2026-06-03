@@ -4,12 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Logistikwebapp</title>
-        <h3>Logistikwebapp</h3>
-        
-        <link rel="stylesheet" href="styles.css"  type="text/css" />
-        
+        <link rel="stylesheet" href="style.css" />
     </head>
   <body>
+    <header>
+      <h1>Logistik</h1>
+    </header>
+    <form id="produkteForm">
+      <input id ="nameProdukteInput" type="text" placeholder="Name" required>
+      <input id ="kategorieProdukteInput" type="text" placeholder="Kategorie" required>
+      <input id ="einheitProdukteInput" type="text" placeholder="Einheit" required>
+      <input id ="bestandProdukteInput" type="number" placeholder="Bestand" required>
+      <input id ="mindestbestandProdukteInput" type="number" placeholder="Mindestbestand" required>
+      <input id ="lagerortProdukteInput" type="text" placeholder="Lagerort" required>
+      <button type="submit" title="Hinzufügen">+</button>
+    </form>
 
+    <div id="ProdukteList"></div>
+
+    <script type="module" src="app.js"></script>
   </body>
 </html>

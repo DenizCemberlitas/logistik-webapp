@@ -14,3 +14,5 @@ app.use("/api/produkte", produkteRoutes);
 app.use("/api/buchungen", buchungenRoutes);
 
 app.listen(3000, () => console.log("Server läuft auf Port 3000"));
+
+app.use(express.static("public"));

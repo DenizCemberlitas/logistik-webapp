@@ -1,0 +1,11 @@
+:root{
+    --bg: #000000;
+    --text: #ffffff;
+
+}
+
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    
+}
