@@ -110,4 +110,4 @@ App läuft dann unter: `http://localhost:3000`
 
 ## 👤 Autor
 
-Deniz – [Portfolio](https://dein-portfolio.github.io)
+Deniz – [Portfolio](https://denizcemberlitas.github.io/portfolio/)
