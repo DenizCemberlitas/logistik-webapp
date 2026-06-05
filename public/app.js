@@ -69,6 +69,7 @@ async function loadProdukte(){
 
 form?.addEventListener("submit", async (e) => {
     e.preventDefault();
+    
     const name = document.getElementById("nameProdukteInput").value;
     const kategorie = document.getElementById("kategorieProdukteInput").value;
     const einheit = document.getElementById("einheitProdukteInput").value;

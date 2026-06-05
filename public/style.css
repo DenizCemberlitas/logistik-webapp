@@ -2,6 +2,8 @@
     --bg: #242424;
     --text: #ffffff;
     --warnung: #e91313;
+    --hover: #565656;
+    --border: #ddd;
 
 }
 
@@ -17,3 +19,18 @@ body {
     color: var(--text);
 }
 
+#ProdukteList {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+  border: 1px solid var(--border);
+  padding: 8px;
+}
+
+tr:hover {background-color: var(--hover);}
+
+#produkteForm {
+    width: 100%;
+}
